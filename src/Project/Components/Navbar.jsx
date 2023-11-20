@@ -11,11 +11,12 @@ import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 //import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
+import { Link } from 'react-router-dom';
 
 
-const pages = ['HOME', 'ABOUT', 'CONTACT','HELP'];
+const pages = [];
 
-function ResponsiveAppBar() {
+export default function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
   
   const handleOpenNavMenu = (event) => {
@@ -48,6 +49,18 @@ function ResponsiveAppBar() {
           >
             RelaxInn!
           </Typography>
+          <CustomLink to="/main" style={{ textDecoration: "none",color: "white"}}>
+            HOME &emsp;
+          </CustomLink>                    
+          <CustomLink to="/main" style={{ textDecoration: "none",color: "white"}}>
+            ABOUT &emsp;
+          </CustomLink>                    
+          <CustomLink to="/main" style={{ textDecoration: "none",color: "white"}}>
+            CONTACT &emsp;
+          </CustomLink>                    
+          <CustomLink to="/main" style={{ textDecoration: "none",color: "white"}}>
+            SERVICE &emsp;
+          </CustomLink>                    
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
@@ -115,12 +128,32 @@ function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-          <button>Login</button>
-          <button>Register</button>
+            {/* <button>Login</button>
+            <button>Register</button> */}
+          <ul>
+              <button>
+              <CustomLink to="/login" style={{ textDecoration: "none" ,color:"blue"}}> 
+              Login
+              </CustomLink>
+              </button>
+
+            <button>
+            <CustomLink to="/sign" style={{ textDecoration: "none" ,color:"blue"}}>
+              SignUp
+              </CustomLink>
+             </button>
+          </ul>
 
         </Toolbar>
       </Container>
     </AppBar>
+    
   );
 }
-export default ResponsiveAppBar;
+function CustomLink({ to, children, ...props}){
+  return (
+    <Link to={to} {...props}>
+      {children}
+    </Link>
+  );
+}
