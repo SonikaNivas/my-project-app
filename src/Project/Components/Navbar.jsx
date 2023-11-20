@@ -128,8 +128,7 @@ export default function Navbar() {
               </Button>
             ))}
           </Box>
-            {/* <button>Login</button>
-            <button>Register</button> */}
+            
           <ul>
               <button>
               <CustomLink to="/login" style={{ textDecoration: "none" ,color:"blue"}}> 
