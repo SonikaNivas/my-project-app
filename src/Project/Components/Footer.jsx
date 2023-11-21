@@ -31,20 +31,20 @@ export default function Footer() {
                 +91 8599753880
             </Typography>
           </Grid>
-          {/* <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
               Contact Us
             </Typography>
+            {/* // <Typography variant="body2" color="text.secondary">
+            //   123 Main Street, Anytown, USA
+            // </Typography> */}
             <Typography variant="body2" color="text.secondary">
-              123 Main Street, Anytown, USA
+              Email: relaxinn@example.com
             </Typography>
             <Typography variant="body2" color="text.secondary">
-              Email: info@example.com
+              Phone: +91 7587995430
             </Typography>
-            <Typography variant="body2" color="text.secondary">
-              Phone: +1 234 567 8901
-            </Typography>
-          </Grid> */}
+          </Grid>
           <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
               Follow Us
