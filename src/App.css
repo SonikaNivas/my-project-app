@@ -36,7 +36,10 @@
     transform: rotate(360deg);
   }
 }
-
+.home
+{
+  
+}
 .footer
 {
   display:flex;

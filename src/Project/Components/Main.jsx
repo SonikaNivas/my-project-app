@@ -80,13 +80,15 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function ButtonBaseDemo() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap',alignItems:'center',justifyContent:'center', minWidth: 300, width: '100%',marginTop:'100px',marginLeft:'50px',marginRight:'50px',marginBottom:'150px' }}>
+    <div className='home'>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap',alignItems:'center',justifyContent:'center', minWidth: 300, width: '100%',marginTop:'100px',marginLeft:'20px',marginRight:'20px',marginBottom:'150px' }}>
       {images.map((image) => (
         <ImageButton
           focusRipple
           key={image.title}
           style={{
-            width: image.width,
+            width: "1000px",
+            height:"500px"
           }}
         >
           <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
@@ -110,5 +112,6 @@ export default function ButtonBaseDemo() {
         </ImageButton>
       ))}
     </Box>
+    </div>
   );
 }
