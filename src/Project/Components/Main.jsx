@@ -106,7 +106,7 @@ const ImageMarked = styled('span')(({ theme }) => ({
 
 export default function ButtonBaseDemo() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap',alignItems:'center',justifyContent:'center', minWidth: 300, width: '100%',marginTop:'100px',marginLeft:'50px' }}>
+    <Box sx={{ display: 'flex', flexWrap: 'wrap',alignItems:'center',justifyContent:'center', minWidth: 300, width: '100%',marginTop:'100px',marginLeft:'50px',marginRight:'50px',marginBottom:'150px' }}>
       {images.map((image) => (
         <ImageButton
           focusRipple
