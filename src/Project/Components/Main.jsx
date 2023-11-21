@@ -1,29 +1,3 @@
-// import * as React from 'react';
-// import Box from '@mui/material/Box';
-// import Paper from '@mui/material/Paper';
-
-// export default function Main() {
-//   return (
-//     <Box
-//       sx={{
-//         display: 'flex',
-//         alignItems: 'center',
-//         justifyContent: 'center',
-//         flexWrap: 'wrap',
-//         '& > :not(style)': {
-//           m: 3,
-//           width: 128,
-//           height: 128,
-//         },
-//       }}
-//     >
-//       <Paper elevation={3} />
-//     </Box>
-//   );
-// };
-
-
-
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
