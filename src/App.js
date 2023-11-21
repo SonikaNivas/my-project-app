@@ -5,6 +5,7 @@ import Main from './Project/Components/Main';
 import { Routes,Route } from 'react-router-dom';
 import Login from './Project/Login';
 import SignUp from './Project/SignUp';
+import Footer from './Project/Components/Footer'
 // import Footer from './Project/Components/Footer';
 
 
@@ -20,6 +21,7 @@ function App() {
         <Route path="/main" element={<Main/>}></Route>
       </Routes>
       </div>
+      <Footer></Footer>
       </>
     
   );
