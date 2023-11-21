@@ -3,7 +3,7 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 import Grid from "@mui/material/Grid";
-// import { Facebook, Instagram, Twitter } from "@mui/icons-material";
+import { Facebook, Instagram, Twitter, YouTube} from "@mui/icons-material";
 import { Box } from "@mui/material";
 
 export default function Footer() {
@@ -45,7 +45,7 @@ export default function Footer() {
               Phone: +1 234 567 8901
             </Typography>
           </Grid> */}
-          {/* <Grid item xs={12} sm={4}>
+          <Grid item xs={12} sm={4}>
             <Typography variant="h6" color="text.primary" gutterBottom>
               Follow Us
             </Typography>
@@ -59,10 +59,13 @@ export default function Footer() {
             >
               <Instagram />
             </Link>
-            <Link href="https://www.twitter.com/" color="inherit">
+            <Link href="https://www.twitter.com/" color="inherit" sx={{pr: 1}}>
               <Twitter />
             </Link>
-          </Grid> */}
+            <Link href="https://youtube.com/" color="inherit">
+              <YouTube />
+            </Link>
+          </Grid>
         </Grid>
         <Box mt={5}>
           <Typography variant="body2" color="text.secondary" align="center">
