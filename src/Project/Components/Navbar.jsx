@@ -72,7 +72,7 @@ export default function Navbar() {
               color="inherit"
             >
               <MenuIcon />
-            </IconButton>
+             </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}

@@ -36,16 +36,9 @@
     transform: rotate(360deg);
   }
 }
-.home
-{
-  
-}
-.footer
-{
-  display:flex;
-  justify-content:center;
-}
-.div{
-  background-image:url("https://media.istockphoto.com/id/104731717/photo/luxury-resort.jpg?s=612x612&w=0&k=20&c=cODMSPbYyrn1FHake1xYz9M8r15iOfGz9Aosy9Db7mI=s");
-  
-}
+/* .Home {
+  backgroundImage: 'url("https://cdn.pixabay.com/photo/2012/11/21/10/24/building-66789_1280.jpg")';
+  backgroundSize: 'cover'; 
+  backgroundPosition: 'center'; 
+  color: 'white'; 
+} */
