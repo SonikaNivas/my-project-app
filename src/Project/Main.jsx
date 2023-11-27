@@ -6,7 +6,14 @@ import Typography from '@mui/material/Typography';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import { CardActionArea } from '@mui/material';
+import { Button, CardActionArea } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+
+// const RoomCard = () => {
+//   const [currentRoom, setCurrentRoom] = useState('standard');
+// const handleRoomClick = (roomType) => {
+//   setCurrentRoom(roomType);
+// };
 const DemoPaper = styled(Paper)(({ theme, backgroundImage, backgroundColor}) => ({
   width: "800px",
   height: "600px",
@@ -28,16 +35,41 @@ const FullScreenPaper = styled(Paper)(({ theme, backgroundImage }) => ({
 }));
 
 export default function SquareCorners() {
+  const navigate=useNavigate();
   return (
     <div>
-       <FullScreenPaper square backgroundImage="url('https://cdn.pixabay.com/photo/2016/03/04/19/36/beach-1236581_1280.jpg')"></FullScreenPaper>
+       <FullScreenPaper square backgroundImage="url('https://cdn.pixabay.com/photo/2016/03/04/19/36/beach-1236581_1280.jpg')">
+       <Button
+          className="abc "
+          onClick={() => navigate("/BookingForm")}
+          variant="contained"
+          type="submit"
+          style={{backgroundColor:"blue",width:'200px',height:'50px',fontFamily:'initial',
+        marginTop:"650px",
+      marginLeft:"600px"}}
+        >
+          BOOK NOW
+          </Button>
+       </FullScreenPaper>
        <Stack direction="row" spacing={0}>
        <DemoPaper square backgroundImage="url('https://cdn.pixabay.com/photo/2018/07/28/18/20/hotel-3568679_1280.jpg')">
        </DemoPaper>
        <DemoPaper square backgroundColor="black">
        <Typography variant="h1"
        color="white">
-          Custom Text 1
+          The Royal <br></br>
+        </Typography>
+        <Typography variant="h2"
+        color="yellow">
+          Escape
+        </Typography>
+        <br></br>
+        <br></br>
+        <br></br>
+        <Typography variant="body1"
+        color="white"
+        textAlign="center">
+          "Step into our beach hotel, where the sun-kissed sands and ocean breeze welcome you to a haven of relaxation. Your comfort is our priority, from the tranquil rooms to the seaside amenities. Embrace the coastal charm, and let us ensure your stay is as refreshing as the waves just steps away. Welcome to a beachfront retreat designed for your ultimate enjoyment!"
         </Typography>
           </DemoPaper>
       </Stack>
@@ -47,7 +79,7 @@ export default function SquareCorners() {
       <br></br>
 <Stack direction="row" spacing={3}>
 <Card sx={{ Width: "800px" }}>
-      <CardActionArea>
+      <CardActionArea onClick={() => navigate("/RoomCard")} >
         <CardMedia
           component="img"
           height="300"
@@ -89,15 +121,17 @@ export default function SquareCorners() {
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="div">
-            RESTAUTRENT
+            RESTAURANT
           </Typography>
           
         </CardContent>
       </CardActionArea>
     </Card>
 </Stack>
-
+<br></br>
+<br></br>
+<br></br>
+<br></br>
   </div>
   );
 }
-

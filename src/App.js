@@ -1,32 +1,39 @@
 // import logo from './logo.svg';
 import './App.css';
-import Navbar from './Project/Components/Navbar';
-import Main from './Project/Components/Main';
-// import Book from './Project/Components/Book';
-// import Service from './Project/Components/Service';
+import Navbar from './Project/Navbar';
+import Main from './Project/Main';
 import { Routes,Route } from 'react-router-dom';
-import Login from './Project/Login';
+import LoginPage from './Project/LoginPage';
 import SignUp from './Project/SignUp';
-import Footer from './Project/Components/Footer'
+import Footer from './Project/Footer';
+import BookingForm from './Project/BookingForm';
+import About from './Project/About';
+import { AuthProvider } from './Project/AuthContext';
+import RoomCard from './Project/RoomCard';
 
 
 function App() {
   return (
       <>
+          <AuthProvider>
+
       <Navbar></Navbar>
-      {/* <Book></Book> */}
+  
       <div className='container'>
       <Routes>
         <Route path="" element={<Main/>}></Route>
-        <Route path="/login" element={<Login />}></Route>
-        <Route path="/sign" element={<SignUp/>}></Route>
+        <Route path="/login" element={<LoginPage />}></Route>
+        <Route path="/signup" element={<SignUp/>}></Route>
         <Route path="/main" element={<Main/>}></Route>
-        {/* <Route path="/book" element={<Book/>}></Route> */}
+        <Route path="/about" element={<About/>}></Route>
+        <Route path="/bookingform" element={<BookingForm/>}></Route>
+        <Route path="roomcard" element={<RoomCard/>}></Route>
+    
       </Routes>
       </div>
-      {/* <Service></Service> */}
       <Footer></Footer>
-      
+      </AuthProvider>
+
       </>
     
   );
